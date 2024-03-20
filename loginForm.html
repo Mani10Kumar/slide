@@ -1,0 +1,323 @@
+<div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
+            <button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+        </div>
+        <div class="social-icons">
+            <a href="#">
+                <icon class="fab fa-instagram icon"></icon>
+            </a>
+            <a href="#">
+                <icon class="fab fa-facebook-square icon"></icon>
+            </a>
+            <a href="#">
+                <icon class="fab fa-twitter icon"></icon>
+            </a>
+        </div>
+<!-- ------------------------------------------------------------- -->
+        <!-- Login Form -->
+        <form id="login" class="input-group" action="index.html">
+            <div class="inp">
+                <i class="fa fa-user" style="font-size: 20px;padding-right: 10px;"></i><input type="text" id="email"
+                    class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;"
+                    required="required">
+            </div>
+            <div class="inp">
+                <i class="fas fa-lock" style="font-size: 20px;padding-right: 10px;"></i><input type="password" id="password"
+                    class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+            </div>
+            <input type="checkbox" class="check-box" id="checkbox"><label for="checkbox">Remember Password</label>
+            <button type="submit" class="submit-btn">Log In</button>
+        </form>
+
+
+        <div class="other" id="other">
+            <div class="instead">
+                <h3>or</h3>
+            </div>
+            <button class="connect" onclick="google()">
+              <!--                 <img src="images/icon/google.png"> --><icon class="fab fa-google"></icon><span>Sign in with Google</span>
+            </button>
+        </div>
+<!-- ----------------------------------------------------------------------- -->
+        <!-- Registration Form -->
+        <form id="register" class="input-group">
+            <input type="text" class="input-field" placeholder="Full Name" required="required">
+            <input type="email" class="input-field" placeholder="Email Address" required="required">
+            <input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
+            <input type="password" class="input-field" placeholder="Confirm Password" name="psame" required="required">
+            <input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()"> <label for="chkAgree">I agree
+                to the Terms & Conditions</label>
+            <button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+<!-- css--------------------------CodeWithMani------------ -->
+    <style type="text/css">
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.form-box {
+    width: 380px;
+    height: 500px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff8;
+    padding: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.4);
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px rgba(0, 0, 0, .1);
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    border: 0;
+    outline: none;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #FA4B37, #DF2771);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.social-icons {
+    margin: 30px auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    width: 30px;
+    color: black;
+    font-size: 25px;
+}
+
+.social-icons a:nth-child(2) {
+    color: #4267B2;
+}
+
+.social-icons a:nth-child(3) {
+    color: #1DA1F2;
+}
+
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    font-size: 13px;
+    color: #010101;
+}
+
+.inp {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    justify-content: center;
+}
+
+.inp img {
+    width: 20px;
+    padding-right: 10px;
+}
+
+
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    outline: none;
+    background: transparent;
+    color: rgba(0, 0, 0);
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#register .input-field {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #FA4B37, #DF2771);
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box {
+    cursor: pointer;
+    margin: 30px 10px 30px 0;
+}
+
+.instead {
+    margin-top: 10px;
+}
+
+.instead h3 {
+    overflow: hidden;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.instead h3:before,
+.instead h3:after {
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.instead h3:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.instead h3:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+span {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+}
+
+#login {
+    left: 50px;
+}
+
+#register {
+    left: 450px;
+}
+
+.other {
+    display: grid;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.connect {
+    display: flex;
+    margin: 10px;
+    padding: 0px 30px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    outline: none;
+    background: #fff3;
+}
+
+.connect:hover {
+    background: #fff8;
+}
+
+.connect img {
+    padding: 5px;
+    width: 25px;
+}
+
+.connect span {
+    padding: 10px;
+    font-size: 15px;
+}
+    </style>
+<!-- Code With Mani  -->
+    <script type="text/javascript">
+        // For LOGIN
+var x = document.getElementById("login");
+var y = document.getElementById("register");
+var z = document.getElementById("btn");
+var a = document.getElementById("log");
+var b = document.getElementById("reg");
+var w = document.getElementById("other");
+
+function register() {
+    x.style.left = "-400px";
+    y.style.left = "50px";
+    z.style.left = "110px";
+    w.style.visibility = "hidden";
+    b.style.color = "#fff";
+    a.style.color = "#000";
+}
+
+function login() {
+    x.style.left = "50px";
+    y.style.left = "450px";
+    z.style.left = "0px";
+    w.style.visibility = "visible";
+    a.style.color = "#fff";
+    b.style.color = "#000";
+}
+
+// CheckBox Function
+function goFurther() {
+    if (document.getElementById("chkAgree").checked == true) {
+        document.getElementById('btnSubmit').style = 'background: linear-gradient(to right, #FA4B37, #DF2771);';
+    }
+    else {
+        document.getElementById('btnSubmit').style = 'background: lightgray;';
+    }
+}
+
+function google() {
+    window.location.assign("https://accounts.google.com/signin/v2/identifier?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue&csig=AF-SEnbZHbi77CbAiuHE%3A1585466693&flowName=GlifWebSignIn&flowEntry=AddSession", "_blank");
+}
+
+    </script>
